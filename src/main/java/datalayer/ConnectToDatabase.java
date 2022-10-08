@@ -4,15 +4,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import config.configDB;
+
 import java.sql.ResultSet;
 
 public class ConnectToDatabase {
     private Connection conn;
     private Statement stmt;
 
-    private String url = "jdbc:mysql://localhost:3306/banhang";
-    private String username = "root";
-    private String password = "X2FD39.PpSqA5IhK";
+    private String url = "jdbc:mysql://localhost:3306/" + configDB.getDatabaseName();
+    private String username = configDB.getUsername();
+    private String password = configDB.getPassword();
 
     public void getConnection() throws ClassNotFoundException, SQLException {
         if (conn == null || conn.isClosed()) {

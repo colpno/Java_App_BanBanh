@@ -3,11 +3,13 @@ package datalayer;
 
 import java.sql.*;
 
+import config.configDB;
+
 public class MySQLConnect {
     String Host="";
-    String UserName="";
-    String Password="";
-    String Database="";
+    String UserName=configDB.getUsername();
+    String Password=configDB.getPassword();
+    String Database=configDB.getDatabaseName();
     
     Connection connect=null;
     Statement statement=null;
@@ -15,9 +17,9 @@ public class MySQLConnect {
     
     public MySQLConnect(String Host,String UserName,String Password,String Database){
         this.Host=Host;
-        this.UserName="root";
-        this.Password="X2FD39.PpSqA5IhK";
-        this.Database=Database;
+        this.UserName=configDB.getUsername();
+        this.Password=configDB.getPassword();
+        this.Database=configDB.getDatabaseName();
     }
     protected void driverTest() throws Exception{
         try{

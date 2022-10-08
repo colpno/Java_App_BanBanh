@@ -13,7 +13,7 @@ public class ConnectToDatabase {
     private Connection conn;
     private Statement stmt;
 
-    private String url = "jdbc:mysql://localhost:3306/" + configDB.getDatabaseName();
+    private String url = "jdbc:mysql://" + configDB.getHost() + ":" + configDB.getPort() + "/" + configDB.getDatabaseName();
     private String username = configDB.getUsername();
     private String password = configDB.getPassword();
 

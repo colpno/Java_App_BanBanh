@@ -6,7 +6,7 @@ import java.sql.*;
 import config.configDB;
 
 public class MySQLConnect {
-    String Host="";
+    String Host=configDB.getHost();
     String UserName=configDB.getUsername();
     String Password=configDB.getPassword();
     String Database=configDB.getDatabaseName();
@@ -16,7 +16,7 @@ public class MySQLConnect {
     ResultSet result=null;
     
     public MySQLConnect(String Host,String UserName,String Password,String Database){
-        this.Host=Host;
+        this.Host=configDB.getHost();
         this.UserName=configDB.getUsername();
         this.Password=configDB.getPassword();
         this.Database=configDB.getDatabaseName();
@@ -32,7 +32,7 @@ public class MySQLConnect {
     protected Connection getConnect() throws Exception{
         if(this.connect==null){
             driverTest();
-            String url="jdbc:mysql://"+this.Host+":3306/"+this.Database;
+            String url="jdbc:mysql://"+this.Host+":" + configDB.getPort() + "/"+this.Database;
             try{
                 this.connect=DriverManager.getConnection(url,this.UserName,this.Password);
             }

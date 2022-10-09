@@ -28,7 +28,3 @@ Cài đặt các dependencies nếu chưa có (nếu muốn biết chưa có th�
 ## App
 
 Chạy file src/main/java/application/**MAIN.java**.
-
-## Feedback
-
-Nếu có thắc mắc, liên hệ Gia Vinh trực tiếp (tại trường) hoặc gián tiếp (chat app).

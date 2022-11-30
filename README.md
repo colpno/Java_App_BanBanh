@@ -1,7 +1,5 @@
 # Hướng dẫn sử dụng
 
-**\* Lưu ý: Không chia sẻ cho bên ngoài khi chưa có sự cho phép của chủ Repo (Tạ Gia Vinh).**
-
 ## Dependencies
 
 Cài đặt các dependencies nếu chưa có (nếu muốn biết chưa có thì xem code có bị lỗi hay không bằng cách chạy chương trình hoặc tìm thủ công) và phải cài đúng phiên bản.
